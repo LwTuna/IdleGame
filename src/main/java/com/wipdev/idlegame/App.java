@@ -3,12 +3,25 @@
  */
 package com.wipdev.idlegame;
 
+import io.javalin.Javalin;
+
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
+
+    private Javalin app;
+    private final int port = 7777;
+
+    public App(){
+        app = Javalin.create(
+                javalinConfig -> javalinConfig.addStaticFiles("public")
+              ).start(port);
+
+        app.post("/hallo",ctx -> {
+            ctx.result("Das ist die Antwort!");
+        });
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+
+
+
+    public static void main(String[] args) { new App(); }
 }

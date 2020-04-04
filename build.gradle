@@ -26,6 +26,11 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+
+    // Add Javalin dependency
+    compile group: 'io.javalin', name: 'javalin', version: '3.7.0'
+    // Add slf4j Logger dependency
+    compile "org.slf4j:slf4j-simple:1.7.28"
 }
 
 application {
