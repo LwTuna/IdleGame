@@ -3,5 +3,4 @@
 
 ## Author
 @Dennis_Hergert     
-@Jonas_Reitz   
-kek
+@Jonas_Reitz
