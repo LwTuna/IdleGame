@@ -5,10 +5,10 @@
     <title>Title</title>
     <script type="text/javascript">
 
-        function sendRequest(){
+        function sendRequest(testVar){
             let http = new XMLHttpRequest();
             let request = {};
-            request.content = "PPSmol :)";
+            request.content = testVar;
             http.open('POST', 'hallo?' + encodeURI(JSON.stringify(request)));
 
             http.onreadystatechange = function () {
@@ -25,8 +25,8 @@
     </script>
 </head>
 <body>
-<button onclick="sendRequest()">PPSMOL</button>
-
+<button onclick="sendRequest('Smol')">PPSMOL</button>
+<button onclick="sendRequest('Big')">PPBig</button>
 
 </body>
 </html>
