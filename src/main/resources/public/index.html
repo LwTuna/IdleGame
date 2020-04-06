@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>IdleGame</title>
     <script type="text/javascript">
-
+        let i = 0;
+        function increaseFunction() {
+            document.getElementById("cnt").stepUp(1);
+        }
         function sendRequest(testVar){
             let http = new XMLHttpRequest();
-            let request = {};
+            let request = {}    ;
             request.content = testVar;
             http.open('POST', 'hallo?' + encodeURI(JSON.stringify(request)));
 
@@ -27,6 +30,7 @@
 <body>
 <button onclick="sendRequest('Smol')">PPSMOL</button>
 <button onclick="sendRequest('Big')">PPBig</button>
-
+<button onclick="increaseFunction()">kekW</button> </body>
+Number: <input type="number" id="cnt">
 </body>
 </html>
